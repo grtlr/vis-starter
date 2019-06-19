@@ -1,0 +1,67 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true
+    },
+    "globals": {
+        "ENV": true
+    },
+    "extends": [
+        "eslint:recommended"
+    ],
+    "parserOptions": {
+        "sourceType": "module",
+        "ecmaVersion": 2017
+    },
+    "rules": {
+        "indent": [ "error", 4 ],
+        "linebreak-style": [ "error", "unix" ],
+        "quotes": [ "error", "single" ],
+        "semi": [ "error", "always" ],
+        "no-var": "error",
+        "prefer-const": "error",
+        "no-unused-vars": [2, {"args": "all", "argsIgnorePattern": "^_"}],
+        "dot-notation" : "error",
+        "dot-location": ["error", "property"],
+        "eqeqeq": ["error", "smart"],
+        "no-implicit-coercion": "error",
+        "no-useless-return": "error",
+        "array-bracket-newline": ["error", { "multiline": true }], 
+        "array-bracket-spacing": ["error", "never"],
+	"block-spacing": "error",
+        "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
+        "comma-dangle": ["error", "always-multiline"],
+        "comma-spacing": ["error", { "before": false, "after": true }],
+        "eol-last": "error",
+        "func-call-spacing": ["error", "never"],
+        "function-paren-newline": ["error", "multiline"],
+        "implicit-arrow-linebreak": ["error", "beside"],
+        "keyword-spacing": "error",
+        "lines-between-class-members": "error",
+        "newline-per-chained-call": ["error", { "ignoreChainWithDepth": 2 }],
+        "no-multiple-empty-lines": ["error", { "max": 1 }],
+        "no-trailing-spaces": "error",
+        "no-unneeded-ternary": "error",
+        "no-whitespace-before-property": "error",
+        "nonblock-statement-body-position": ["error", "beside"],
+        "object-curly-spacing": ["error", "always"],
+        "one-var": ["error", "never"],
+        "operator-assignment": "error",
+        "operator-linebreak" : ["error", "before"],
+        "padded-blocks": ["error", "never"],
+        "space-before-blocks": "error",
+        "space-before-function-paren": ["error", { "anonymous": "always", "named": "always", "asyncArrow": "always" }],
+        "space-in-parens": "error",
+        "space-infix-ops": "error",
+        "arrow-spacing": "error",
+        "no-confusing-arrow": "error",
+        "no-useless-rename": "error",
+        "prefer-numeric-literals": "error",
+        "prefer-template": "error",
+        "sort-imports": ["error", { "ignoreCase": true }],
+        "camelcase": "error"
+    },
+    "plugins": [
+        "svelte3"
+    ]
+}
