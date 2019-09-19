@@ -17,8 +17,8 @@ You can start a live development server with hot reloading:
 
     yarn run dev
 
-In addition, there is an extensive style guide at .eslintrc.json. To apply automated fixes simply run:
+In addition, there is an extensive style guide at `.eslintrc.json`. To apply automated fixes simply run:
 
     yarn run lint-fix
 
-This template also provides continuous integration using Travis CI.
+This template also provides continuous integration using Travis CI and GitHub Actions.
