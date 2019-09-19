@@ -4,8 +4,22 @@ import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { eslint } from 'rollup-plugin-eslint';
 import { terser } from 'rollup-plugin-terser';
+import path from 'path';
+
 
 const production = !process.env.ROLLUP_WATCH;
+
+const onwarn = warning => {
+    // Silence circular dependency warning for external packages
+    if (
+        warning.code === 'CIRCULAR_DEPENDENCY'
+        && !warning.importer.indexOf(path.normalize('node_modules/'))
+    ) {
+    return
+    }
+
+    console.warn(`(!) ${warning.message}`)
+}
 
 export default {
     input: 'src/main.js',
@@ -16,7 +30,9 @@ export default {
         file: 'public/bundle.js'
     },
     plugins: [
-        eslint(),
+        eslint({
+            throwOnWarning: production
+        }),
         svelte({
             dev: !production,
             css: css => {
@@ -30,5 +46,6 @@ export default {
     ],
     watch: {
     	clearScreen: false
-    }
+    },
+    onwarn
 };
