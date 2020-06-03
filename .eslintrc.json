@@ -114,7 +114,7 @@
             }
         ],
         "no-multiple-empty-lines": [
-            "error",
+            "warn",
             {
                 "max": 1,
                 "maxBOF": 2,
