@@ -17,7 +17,11 @@ The project can be build using:
     yarn install
     yarn run build
 
-You can start a live development server with hot reloading:
+Afterwards you can start up a local webserver with this build by typing:
+
+    yarn run start
+
+You can also start a live development server with 🔥-reloading:
 
     yarn run dev
 
