@@ -5,6 +5,7 @@ import livereload from 'rollup-plugin-livereload';
 import { eslint } from 'rollup-plugin-eslint';
 import { terser } from 'rollup-plugin-terser';
 import path from 'path';
+import { Server } from 'http';
 
 
 const production = !process.env.ROLLUP_WATCH;
@@ -19,6 +20,23 @@ const onwarn = warning => {
     }
 
     console.warn(`(!) ${warning.message}`)
+}
+
+const serve = () => {
+	let started = false;
+
+	return {
+		writeBundle() {
+			if (!started) {
+				started = true;
+
+				require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
+					stdio: ['ignore', 'inherit', 'inherit'],
+					shell: true
+				});
+			}
+		}
+	};
 }
 
 export default {
@@ -39,8 +57,12 @@ export default {
             	css.write('public/bundle.css');
             }
         }),
-        resolve({ browser: true }),
+        resolve({
+            browser: true,
+            dedupe: ['svelte'],
+        }),
         commonjs(),
+        !production && Server(),
         !production && livereload('public'),
         production && terser()
     ],

@@ -14,7 +14,6 @@
     const y = d3.scaleLinear()
         .domain([0, 4])
         .range([height, 0]);
-
 </script>
 
 <svg {width} {height}>

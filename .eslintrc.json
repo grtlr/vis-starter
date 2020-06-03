@@ -8,7 +8,7 @@
     },
     "parserOptions": {
         "sourceType": "module",
-        "ecmaVersion": 2018
+        "ecmaVersion": 2019
     },
     "rules": {
         "max-len": [
@@ -21,49 +21,138 @@
                 "ignoreRegExpLiterals": true
             }
         ],
-        "indent": ["warn", 4],
-        "no-unused-vars": [ 2, { "args": "all", "argsIgnorePattern": "^_" } ],
-        "linebreak-style": ["warn", "unix"],
-        "quotes": ["warn", "single"],
-        "semi": ["warn", "always"],
+        "indent": [
+            "warn",
+            4
+        ],
+        "no-unused-vars": [
+            2,
+            {
+                "args": "all",
+                "argsIgnorePattern": "^_"
+            }
+        ],
+        "linebreak-style": [
+            "warn",
+            "unix"
+        ],
+        "quotes": [
+            "warn",
+            "single"
+        ],
+        "semi": [
+            "warn",
+            "always"
+        ],
         "no-var": "warn",
         "prefer-const": "warn",
         "dot-notation": "warn",
-        "dot-location": ["warn", "property"],
-        "eqeqeq": ["warn", "smart"],
+        "dot-location": [
+            "warn",
+            "property"
+        ],
+        "eqeqeq": [
+            "warn",
+            "smart"
+        ],
         "no-implicit-coercion": "warn",
         "no-useless-return": "warn",
-        "array-bracket-newline": ["warn", { "multiline": true }],
-        "array-bracket-spacing": ["warn", "never"],
+        "array-bracket-newline": [
+            "warn",
+            {
+                "multiline": true
+            }
+        ],
+        "array-bracket-spacing": [
+            "warn",
+            "never"
+        ],
         "block-spacing": "warn",
-        "brace-style": ["warn", "1tbs", { "allowSingleLine": true }],
-        "comma-dangle": ["warn", "always-multiline"],
-        "comma-spacing": ["warn", { "before": false, "after": true }],
+        "brace-style": [
+            "warn",
+            "1tbs",
+            {
+                "allowSingleLine": true
+            }
+        ],
+        "comma-dangle": [
+            "warn",
+            "always-multiline"
+        ],
+        "comma-spacing": [
+            "warn",
+            {
+                "before": false,
+                "after": true
+            }
+        ],
         "eol-last": "warn",
-        "func-call-spacing": ["warn", "never"],
-        "function-paren-newline": ["warn", "multiline"],
-        "implicit-arrow-linebreak": ["warn", "beside"],
+        "func-call-spacing": [
+            "warn",
+            "never"
+        ],
+        "function-paren-newline": [
+            "warn",
+            "multiline"
+        ],
+        "implicit-arrow-linebreak": [
+            "warn",
+            "beside"
+        ],
         "keyword-spacing": "warn",
         "lines-between-class-members": [
             "warn",
             "always",
-            { "exceptAfterSingleLine": true }
+            {
+                "exceptAfterSingleLine": true
+            }
         ],
-        "newline-per-chained-call": ["warn", { "ignoreChainWithDepth": 2 }],
-        "no-multiple-empty-lines": ["warn", { "max": 1 }],
+        "newline-per-chained-call": [
+            "warn",
+            {
+                "ignoreChainWithDepth": 2
+            }
+        ],
+        "no-multiple-empty-lines": [
+            "error",
+            {
+                "max": 1,
+                "maxBOF": 2,
+                "maxEOF": 0
+            }
+        ], // FIX for eslint
         "no-trailing-spaces": "warn",
         "no-unneeded-ternary": "warn",
         "no-whitespace-before-property": "warn",
-        "nonblock-statement-body-position": ["warn", "beside"],
-        "object-curly-spacing": ["warn", "always"],
-        "one-var": ["warn", "never"],
+        "nonblock-statement-body-position": [
+            "warn",
+            "beside"
+        ],
+        "object-curly-spacing": [
+            "warn",
+            "always"
+        ],
+        "one-var": [
+            "warn",
+            "never"
+        ],
         "operator-assignment": "warn",
-        "operator-linebreak": ["warn", "before"],
-        "padded-blocks": ["warn", "never"],
+        "operator-linebreak": [
+            "warn",
+            "before"
+        ],
+        "padded-blocks": [
+            "warn",
+            "never"
+        ],
         "space-before-blocks": "warn",
         "space-before-function-paren": [
             "warn",
-            { "anonymous": "always", "named": "never", "asyncArrow": "always" }
+            {
+                "anonymous": "always",
+                "named": "never",
+                "asyncArrow": "always"
+            }
         ],
         "space-in-parens": "warn",
         "space-infix-ops": "warn",
@@ -72,8 +161,23 @@
         "no-useless-rename": "warn",
         "prefer-numeric-literals": "warn",
         "prefer-template": "warn",
-        "sort-imports": ["warn", { "ignoreCase": true }],
+        "sort-imports": [
+            "warn",
+            {
+                "ignoreCase": true
+            }
+        ],
         "camelcase": "warn"
     },
-    "plugins": [ "svelte3" ]
+    "plugins": [
+        "svelte3"
+    ],
+    "overrides": [
+        {
+            "files": [
+                "*.svelte"
+            ],
+            "processor": "svelte3/svelte3"
+        }
+    ]
 }
