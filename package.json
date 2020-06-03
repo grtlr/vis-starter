@@ -27,6 +27,8 @@
         "lint-fix": "eslint --fix --config .eslintrc.json --ext .js,.html,.svelte src"
     },
     "dependencies": {
-        "d3": "^5.16.0"
+        "vega": "^5.13.0",
+        "vega-embed": "^6.8.0",
+        "vega-lite": "^4.13.0"
     }
 }
