@@ -1,5 +1,5 @@
 <script>
-    import * as d3 from '../vendor/d3-bundle.js';
+    import d3 from 'd3';
 
     const width = 400;
     const height = 400;
