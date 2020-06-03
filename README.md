@@ -6,6 +6,10 @@ To use this repository just use [degit](https://github.com/Rich-Harris/degit):
 
     npx degit grtlr/vis-starter <name>
 
+By default, this template ships with [`d3`](https://d3js.org/). If you prefer to use [`vega-lite`](https://vega.github.io/vega-lite/), simply check out the following branch:
+
+    npx degit grtlr/vis-starter#vega-lite <name>
+
 ## Development
 
 The project can be build using:
